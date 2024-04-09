@@ -56,12 +56,60 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="16.0"/>
-    <comp lib="4" loc="(470,930)" name="Register">
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="Program_Counter"/>
+    <comp lib="0" loc="(480,860)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(480,880)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(480,900)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(480,920)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(590,1080)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="width" val="12"/>
+    </comp>
+    <comp lib="0" loc="(640,940)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
       <a name="width" val="64"/>
     </comp>
-    <comp loc="(410,820)" name="fetch"/>
+    <comp lib="0" loc="(80,860)" name="Clock"/>
+    <comp lib="4" loc="(320,1110)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="label" val="Program_Counter"/>
+      <a name="width" val="12"/>
+    </comp>
+    <comp loc="(450,860)" name="fetch"/>
+    <wire from="(130,1180)" to="(320,1180)"/>
+    <wire from="(130,860)" to="(130,1180)"/>
+    <wire from="(130,860)" to="(230,860)"/>
+    <wire from="(210,1050)" to="(430,1050)"/>
+    <wire from="(210,880)" to="(210,1050)"/>
+    <wire from="(210,880)" to="(230,880)"/>
+    <wire from="(380,1140)" to="(430,1140)"/>
+    <wire from="(430,1050)" to="(430,1140)"/>
+    <wire from="(450,860)" to="(480,860)"/>
+    <wire from="(450,880)" to="(480,880)"/>
+    <wire from="(450,900)" to="(480,900)"/>
+    <wire from="(450,920)" to="(480,920)"/>
+    <wire from="(450,940)" to="(640,940)"/>
+    <wire from="(450,960)" to="(570,960)"/>
+    <wire from="(570,1080)" to="(590,1080)"/>
+    <wire from="(570,960)" to="(570,1080)"/>
+    <wire from="(80,860)" to="(130,860)"/>
   </circuit>
   <circuit name="fetch">
     <a name="appearance" val="logisim_evolution"/>
@@ -75,10 +123,7 @@
       <a name="output" val="true"/>
       <a name="width" val="12"/>
     </comp>
-    <comp lib="0" loc="(450,790)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="label" val="clk"/>
-    </comp>
+    <comp lib="0" loc="(450,790)" name="Clock"/>
     <comp lib="0" loc="(470,500)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
@@ -709,21 +754,33 @@
       <a name="label" val="icode"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(460,360)" name="Pin">
+    <comp lib="0" loc="(470,360)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="true"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="1" loc="(450,360)" name="OR Gate">
-      <a name="inputs" val="5"/>
+    <comp lib="1" loc="(460,360)" name="OR Gate">
+      <a name="inputs" val="4"/>
     </comp>
     <comp lib="2" loc="(260,440)" name="Decoder">
       <a name="select" val="4"/>
     </comp>
     <wire from="(100,460)" to="(260,460)"/>
     <wire from="(260,440)" to="(260,460)"/>
-    <wire from="(450,360)" to="(460,360)"/>
+    <wire from="(280,300)" to="(400,300)"/>
+    <wire from="(280,320)" to="(390,320)"/>
+    <wire from="(280,330)" to="(380,330)"/>
+    <wire from="(280,340)" to="(370,340)"/>
+    <wire from="(370,340)" to="(370,380)"/>
+    <wire from="(370,380)" to="(410,380)"/>
+    <wire from="(380,330)" to="(380,370)"/>
+    <wire from="(380,370)" to="(410,370)"/>
+    <wire from="(390,320)" to="(390,350)"/>
+    <wire from="(390,350)" to="(410,350)"/>
+    <wire from="(400,300)" to="(400,340)"/>
+    <wire from="(400,340)" to="(410,340)"/>
+    <wire from="(460,360)" to="(470,360)"/>
   </circuit>
   <circuit name="PC_Increment">
     <a name="appearance" val="logisim_evolution"/>
