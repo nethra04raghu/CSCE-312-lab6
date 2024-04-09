@@ -213,6 +213,9 @@
     <comp lib="8" loc="(1315,490)" name="Text">
       <a name="text" val="ValP = PC + 1 + Need_regIDs + Need_ValC * 8"/>
     </comp>
+    <comp lib="8" loc="(987,339)" name="Text">
+      <a name="text" val="update PC_inc"/>
+    </comp>
     <comp loc="(1060,540)" name="Need_valC"/>
     <comp loc="(1060,590)" name="Need_regIDs"/>
     <comp loc="(1100,770)" name="align"/>
@@ -803,25 +806,29 @@
       <a name="output" val="true"/>
     </comp>
     <comp lib="1" loc="(460,360)" name="OR Gate">
-      <a name="inputs" val="4"/>
+      <a name="inputs" val="7"/>
     </comp>
     <comp lib="2" loc="(260,440)" name="Decoder">
       <a name="select" val="4"/>
     </comp>
     <wire from="(100,460)" to="(260,460)"/>
     <wire from="(260,440)" to="(260,460)"/>
-    <wire from="(280,300)" to="(400,300)"/>
+    <wire from="(280,300)" to="(410,300)"/>
+    <wire from="(280,310)" to="(400,310)"/>
     <wire from="(280,320)" to="(390,320)"/>
     <wire from="(280,330)" to="(380,330)"/>
     <wire from="(280,340)" to="(370,340)"/>
-    <wire from="(370,340)" to="(370,380)"/>
-    <wire from="(370,380)" to="(410,380)"/>
-    <wire from="(380,330)" to="(380,370)"/>
-    <wire from="(380,370)" to="(410,370)"/>
+    <wire from="(280,380)" to="(410,380)"/>
+    <wire from="(280,390)" to="(410,390)"/>
+    <wire from="(370,340)" to="(370,370)"/>
+    <wire from="(370,370)" to="(410,370)"/>
+    <wire from="(380,330)" to="(380,360)"/>
+    <wire from="(380,360)" to="(410,360)"/>
     <wire from="(390,320)" to="(390,350)"/>
     <wire from="(390,350)" to="(410,350)"/>
-    <wire from="(400,300)" to="(400,340)"/>
+    <wire from="(400,310)" to="(400,340)"/>
     <wire from="(400,340)" to="(410,340)"/>
+    <wire from="(410,300)" to="(410,330)"/>
     <wire from="(460,360)" to="(470,360)"/>
   </circuit>
   <circuit name="PC_Increment">
