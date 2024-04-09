@@ -92,6 +92,9 @@
       <a name="label" val="ValP"/>
       <a name="width" val="12"/>
     </comp>
+    <comp lib="8" loc="(639,439)" name="Text">
+      <a name="text" val="account for the frequency of the clock by the worst case scenario of instruction (idk how to calculate)"/>
+    </comp>
     <comp loc="(450,860)" name="fetch"/>
     <wire from="(100,720)" to="(100,800)"/>
     <wire from="(100,800)" to="(200,800)"/>
