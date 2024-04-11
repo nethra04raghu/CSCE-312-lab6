@@ -111,6 +111,7 @@
     <comp lib="8" loc="(635,435)" name="Text">
       <a name="text" val="account for the frequency of the clock by the worst case scenario of instruction (idk how to calculate)"/>
     </comp>
+    <comp loc="(1050,610)" name="decode"/>
     <comp loc="(450,860)" name="fetch"/>
     <wire from="(130,1180)" to="(320,1180)"/>
     <wire from="(130,860)" to="(130,1180)"/>
@@ -202,7 +203,7 @@
     <comp loc="(1220,770)" name="Instruction_Memory"/>
     <comp loc="(1430,540)" name="Need_valC"/>
     <comp loc="(1430,590)" name="Need_regIDs"/>
-    <comp loc="(1500,770)" name="align"/>
+    <comp loc="(1500,770)" name="Align"/>
     <comp loc="(1730,540)" name="PC_Increment"/>
     <wire from="(1180,540)" to="(1180,590)"/>
     <wire from="(1180,540)" to="(1210,540)"/>
@@ -500,9 +501,9 @@
     <wire from="(970,470)" to="(970,690)"/>
     <wire from="(970,690)" to="(1010,690)"/>
   </circuit>
-  <circuit name="align">
+  <circuit name="Align">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="align"/>
+    <a name="circuit" val="Align"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="16.0"/>
     <comp lib="0" loc="(130,550)" name="Pin">
@@ -999,5 +1000,111 @@
     <wire from="(550,290)" to="(550,380)"/>
     <wire from="(550,380)" to="(580,380)"/>
     <wire from="(620,390)" to="(690,390)"/>
+  </circuit>
+  <circuit name="decode">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="decode"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="16.0"/>
+    <comp lib="0" loc="(1190,500)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ValM"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1190,520)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ValE"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(240,380)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(250,510)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="icode"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(250,530)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ifun"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(250,550)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rA"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(250,570)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rB"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(250,680)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ValC"/>
+      <a name="width" val="64"/>
+    </comp>
+    <comp lib="0" loc="(510,330)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ValA"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(600,330)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ValB"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp loc="(830,460)" name="Register_file"/>
+  </circuit>
+  <circuit name="Register_file">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Register_file"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="16.0"/>
+    <comp lib="0" loc="(1100,430)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="M"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1100,450)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="E"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(190,300)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(420,260)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="A"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(440,610)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="dstM"/>
+    </comp>
+    <comp lib="0" loc="(510,260)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="B"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(510,610)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="dstE"/>
+    </comp>
+    <comp lib="0" loc="(570,610)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="srcA"/>
+    </comp>
+    <comp lib="0" loc="(640,610)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="srcB"/>
+    </comp>
   </circuit>
 </project>
