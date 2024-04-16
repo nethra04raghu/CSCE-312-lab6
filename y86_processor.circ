@@ -1107,4 +1107,70 @@
       <a name="label" val="srcB"/>
     </comp>
   </circuit>
+  <circuit name="dstE">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="dstE"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="16.0"/>
+    <comp lib="0" loc="(410,330)" name="Constant">
+      <a name="value" val="0xf"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(420,380)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rA"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(570,620)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="icode"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(600,410)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="E"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="2" loc="(590,410)" name="Multiplexer">
+      <a name="select" val="4"/>
+      <a name="width" val="4"/>
+    </comp>
+    <wire from="(410,330)" to="(450,330)"/>
+    <wire from="(420,380)" to="(500,380)"/>
+    <wire from="(450,330)" to="(450,430)"/>
+    <wire from="(450,330)" to="(460,330)"/>
+    <wire from="(450,430)" to="(550,430)"/>
+    <wire from="(460,330)" to="(460,420)"/>
+    <wire from="(460,330)" to="(470,330)"/>
+    <wire from="(460,420)" to="(550,420)"/>
+    <wire from="(470,330)" to="(470,410)"/>
+    <wire from="(470,330)" to="(480,330)"/>
+    <wire from="(470,410)" to="(550,410)"/>
+    <wire from="(480,330)" to="(480,400)"/>
+    <wire from="(480,330)" to="(490,330)"/>
+    <wire from="(480,400)" to="(550,400)"/>
+    <wire from="(490,330)" to="(490,390)"/>
+    <wire from="(490,330)" to="(500,330)"/>
+    <wire from="(490,390)" to="(550,390)"/>
+    <wire from="(500,330)" to="(500,370)"/>
+    <wire from="(500,330)" to="(510,330)"/>
+    <wire from="(500,370)" to="(550,370)"/>
+    <wire from="(500,380)" to="(500,440)"/>
+    <wire from="(500,380)" to="(550,380)"/>
+    <wire from="(500,440)" to="(550,440)"/>
+    <wire from="(510,330)" to="(510,360)"/>
+    <wire from="(510,330)" to="(520,330)"/>
+    <wire from="(510,360)" to="(550,360)"/>
+    <wire from="(520,330)" to="(520,350)"/>
+    <wire from="(520,330)" to="(530,330)"/>
+    <wire from="(520,350)" to="(550,350)"/>
+    <wire from="(530,330)" to="(530,340)"/>
+    <wire from="(530,330)" to="(550,330)"/>
+    <wire from="(530,340)" to="(550,340)"/>
+    <wire from="(570,490)" to="(570,620)"/>
+    <wire from="(590,410)" to="(600,410)"/>
+  </circuit>
 </project>
